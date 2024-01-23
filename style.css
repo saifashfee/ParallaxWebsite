@@ -1,0 +1,37 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* overflow-x: hidden; */
+    overflow-y: auto;
+}
+#wrapper{
+    height: 100vh;
+    /* overflow-y: auto; neeche scroll karna hai isiliye */
+    /* overflow-x: hidden; side mein scroll nahi karna */
+    perspective: 10px; /*3d effect chahiye*/
+}
+.container{
+    position: relative; /*images ek dusre ke uppar aaengi position absolute ki vajeh se and for that container ko relative karna padega*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    transform-style: preserve-3d; /*to state that flex items (images and texts) 3d positioned hain not 2d*/
+    z-index: -1; /*helps in overlapping*/
+}
+
+#fg-id{
+    align-items: flex-end;
+}
+#fg-id, #bg-id{
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+    object-fit:contain;
+}
+#adven-id{
+    align-self:center;
+    transform: translate(0, -600%);
+}
+
